@@ -1,5 +1,17 @@
 from colorama import init, Fore, Back, Style
 
+try:
+    from colorama import init, Fore
+    init()
+    verde = Fore.GREEN
+    rojo = Fore.RED
+    azul = Fore.BLUE
+    blanco = Fore.WHITE
+    rosa = Fore.LIGHTRED_EX
+    amarillo = Fore.YELLOW
+except ImportError:
+    verde = rojo = azul = blanco = rosa = amarillo = ""
+
 init()
 
 def main():
